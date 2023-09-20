@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { getBooksData } from "../services/book-services";
+import Book from "./Book.jsx";
 
 const BooksList = () => {
 	const [bookName, setBookName] = useState('');
@@ -34,12 +35,10 @@ const BooksList = () => {
 				<div>{error}</div>
 				{books.map((book, index) => {
 					return (
-					<div key={`book-${index}`}>
-						<img src={book.volumeInfo?.imageLinks?.smallThumbnail} alt="No image found" />
-						<p>{book.volumeInfo?.authors}</p>
-						<p>{book.title}</p>
-						<p>{book.volumeInfo?.description}</p>
-					</div>
+						<Book 
+							book={book}
+							key={index}				
+						/>
 					);
 				})}
 
