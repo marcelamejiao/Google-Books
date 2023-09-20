@@ -3,7 +3,8 @@ import { useState } from "react";
 const Book = () => {
 	const [bookName, setBookName] = useState('');
 
-	const refreshSearch = () => {
+	const refreshSearch = (e) => {
+		e.preventDefault();
 		console.log("hey")
 	}
 
@@ -14,8 +15,15 @@ const Book = () => {
 
 	return (
 		<>
-			<input type="text" value={bookName} onChange={handleChange} />
-			<button  onClick={refreshSearch}>Send</button>
+			<form onSubmit={refreshSearch}>
+				<input 
+					type="text" 
+					placeholder="enter the book name"
+					value={bookName} 
+					onChange={handleChange} 
+				/>
+				<button>Send</button>
+			</form>
 		</>
 	);
 };
