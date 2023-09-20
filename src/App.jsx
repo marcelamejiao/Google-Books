@@ -1,10 +1,10 @@
-import Book from "./components/book"
+import BooksList from "./components/BooksList";
 
 function App() {
 
   return (
     <>
-      <Book />
+      <BooksList />
     </>
   )
 }
