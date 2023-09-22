@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { getBooksData } from "../services/book-services";
-import Book from "./Book.jsx";
+import Book from "./Book/Book.jsx";
+import styles from './Wrapper/Wrapper.module.scss';
 
-const BooksList = () => {
+const BooksList = ( {setModalBookData} ) => {
 	const [bookName, setBookName] = useState('');
 	const [books, setBooks] = useState([]);
 	const [error, setError] = useState('');
@@ -33,16 +34,19 @@ const BooksList = () => {
 				/>
 				<button>Send</button>
 				<div>{error}</div>
+			</form>
+
+			<div className={styles.wrap}>
 				{books.map((book, index) => {
 					return (
 						<Book 
 							book={book}
-							key={index}				
+							key={index}	
+							setModalBookData={setModalBookData}
 						/>
 					);
 				})}
-
-			</form>
+			</div>
 		</>
 	);
 };
