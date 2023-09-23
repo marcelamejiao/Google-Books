@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { getBooksData } from "../services/book-services";
-import Book from "./Book/Book.jsx";
-import styles from './Wrapper/Wrapper.module.scss';
+import { getBooksData } from "../../services/book-services";
+import Book from "../../components/Book/Book.jsx";
+import styles from '../Wrapper/Wrapper.module.scss';
 
 const BooksList = ( {setModalBookData} ) => {
 	const [bookName, setBookName] = useState('');

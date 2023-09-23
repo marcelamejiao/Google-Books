@@ -1,21 +1,26 @@
 .modalCard {
-	border: 0.5rem solid rgba(128, 128, 128, 0.478);
-	background-color: rgba(228, 225, 205, 0.845);
-	width: 60%;
-	height: 50vh;
+	background-color: rgb(249, 244, 244); 
+	color: black;
+	width: 30%;
+	height: 40vh;
 	border-radius: 1rem;
 	text-align: center;
-	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.087), 0 17px 50px 0 rgba(0,0,0,0.24);
-	opacity: 0.8;
+	box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.905);
+	opacity: 0.7;
 	padding: 2rem;
-	font-size: 1.5rem;
+	font-size: 1.1rem;
+	font-weight: 400;
+	text-transform: uppercase;
   z-index: 1; 
   left: 0;
   top: 0;
-
+	font-family: 'Lato', sans-serif;
 
 	&:hover {
-		opacity: 1;
+		transform: translateY(-5px);
+		border: none;
+		transition: all 0.25s ease-in;
+		opacity: 0.9;
 	}
 }
 
