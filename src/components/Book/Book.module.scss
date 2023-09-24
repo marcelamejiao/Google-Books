@@ -60,3 +60,9 @@
 		width: 80%;
 	}
 }
+
+@include mixins.tablet {
+	.book {
+		width: 40%;
+	}
+}
