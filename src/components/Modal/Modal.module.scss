@@ -1,7 +1,9 @@
+@use '../../partials/mixins.scss';
+
 .modalCard {
 	background-color: rgb(249, 244, 244); 
 	color: black;
-	width: 30%;
+	width: 40%;
 	height: 40vh;
 	border-radius: 1rem;
 	text-align: center;
@@ -14,7 +16,12 @@
   z-index: 1; 
   left: 0;
   top: 0;
-	font-family: 'Lato', sans-serif;
+	line-height: 1.8rem;
+	overflow-y: scroll;
+
+	&__detail {
+		text-align: left;
+	}
 
 	&:hover {
 		transform: translateY(-5px);
@@ -29,12 +36,26 @@
   right: 0;
   left: 0;
   bottom: 0;
-  position: absolute;
+  position: fixed;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 
 	&--hidden {
 		display: none;
+	}
+}
+
+// mobile
+@include mixins.phone {
+	.modalCard {
+		width: 90%;
+		height: 50vh;
+	}
+}
+
+@include mixins.tablet {
+	.modalCard {
+		width: 70%;
 	}
 }

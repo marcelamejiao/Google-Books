@@ -5,6 +5,7 @@ import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 const Modal = ( { book, setModalBookData } ) => {
 	let modalClasses = styles.modalCard;
 	let wrapperClasses = styles['modal-wrapper'];
+	let modalDetailClass = styles['modalCard__detail'];
 
 	if (!book) {
 		wrapperClasses += ` ${styles['modal-wrapper--hidden']}`
@@ -15,11 +16,11 @@ const Modal = ( { book, setModalBookData } ) => {
 			<div className={modalClasses}>
 				<FontAwesomeIcon onClick={() => {setModalBookData(null)}} icon={faCircleXmark} />
 				<p>{book?.volumeInfo?.title}</p>
-				<p>Language: {book?.volumeInfo?.language}</p>
-				<p>Published Date: {book?.volumeInfo?.publishedDate}</p>
-				<p>Publisher: {book?.volumeInfo?.publisher}</p>
-				<p>Page count: {book?.volumeInfo?.pageCount}</p>
-				<p>Average raiting: {book?.volumeInfo?.averageRating}</p>
+				<p className={modalDetailClass}>Language: {book?.volumeInfo?.language}</p>
+				<p className={modalDetailClass}>Published Date: {book?.volumeInfo?.publishedDate}</p>
+				<p className={modalDetailClass}>Publisher: {book?.volumeInfo?.publisher}</p>
+				<p className={modalDetailClass}>Page count: {book?.volumeInfo?.pageCount}</p>
+				<p className={modalDetailClass}>Average raiting: {book?.volumeInfo?.averageRating}</p>
 			</div>
 		</div>
 	);
