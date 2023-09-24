@@ -14,6 +14,7 @@ const Modal = ( { book, setModalBookData } ) => {
 		<div className={wrapperClasses}>
 			<div className={modalClasses}>
 				<FontAwesomeIcon onClick={() => {setModalBookData(null)}} icon={faCircleXmark} />
+				<p>{book?.volumeInfo?.title}</p>
 				<p>Language: {book?.volumeInfo?.language}</p>
 				<p>Published Date: {book?.volumeInfo?.publishedDate}</p>
 				<p>Publisher: {book?.volumeInfo?.publisher}</p>

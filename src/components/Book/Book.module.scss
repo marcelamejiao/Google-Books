@@ -23,7 +23,6 @@
 	text-align: center;
 	line-height: 1.25;
 	font-size: 0.8rem;
-	width: 100%;
 	background-color: #2196fe;
 	color: white;
 	box-shadow: 0 2px 5px 0 rgb(245, 252, 205);
@@ -31,6 +30,8 @@
 	padding: 0.5rem;
 	text-transform: uppercase;
 	font-weight: 600;
+	height: 20%;
+	overflow-y: hidden;
 }
 
 .image {
