@@ -1,3 +1,5 @@
+@use '../../partials/mixins.scss';
+
 .book {
 	width: 20%;
 	height: 50vh;
@@ -51,3 +53,10 @@
 	line-height: 1.50;
 }
 
+// mobile
+
+@include mixins.phone {
+	.book {
+		width: 80%;
+	}
+}
