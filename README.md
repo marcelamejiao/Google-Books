@@ -46,12 +46,15 @@ The coulor palette here: https://colorhunt.co/palette/164b601b6b934fc0d0a2ff86
 ![Desktop](./public/desktop-screenshot.png)
 
 * **Mobile Mode**
+
 ![Phone](./public/phone-screenshot.png)
 
 * **Tablet Mode**
+
 ![Tablet](./public/tablet-screenshot.png)
 
 * **Error**
+
 ![Error](./public/error-screenshot.png)
 
 ## **Deployed link**
