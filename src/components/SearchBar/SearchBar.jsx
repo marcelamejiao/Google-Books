@@ -11,6 +11,8 @@ const SearchBar = ( { setBooks } ) => {
 
 	const refreshSearch = async (e) => {
 		e.preventDefault();
+		setError('');
+
 		try {
 			const booksData = await getBooksData(bookName);
 			// with the APIs response, change the initial state
