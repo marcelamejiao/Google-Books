@@ -19,6 +19,8 @@ const SearchBar = ( { setBooks } ) => {
 			setBooks(booksData);
 		} catch (err) {
 			setError(err.message);
+			// when an error occurs don't show any books
+			setBooks([]);
 		}
 	};
 
