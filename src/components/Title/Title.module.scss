@@ -1,17 +1,18 @@
+@use '../../partials/palette.scss';
+
 .title {
-	color:white;
-	border-bottom: 5px solid rgb(162, 255, 134);
+	color: palette.$basic-color-white;
+	border-bottom: 5px solid palette.$vivid-color;
 	border-radius: 0.5rem;
 	text-align: center;
 	font-family: 'Lora', sans-serif;
-	background-color: black ;
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.594);
+	background-color: palette.$basic-color-black;
 	font-size: 3rem; 
 	padding: 1rem;
 
 	&:hover {
 		border: none;
-		border-bottom: 5px solid #2196fe;
+		border-bottom: 5px solid palette.$main-color;
 		transition: all 0.25s ease-in; 
 	}
 }

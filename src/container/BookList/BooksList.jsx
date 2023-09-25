@@ -1,5 +1,5 @@
 import Book from "../../components/Book/Book.jsx";
-import styles from '../Wrapper/Wrapper.module.scss';
+import styles from './BooksList.module.scss';
 
 const BooksList = ( {setModalBookData, books} ) => {
 

@@ -1,4 +1,5 @@
 @use '../../partials/mixins.scss';
+@use '../../partials/palette.scss';
 
 .wrapper {
 	display: flex;
@@ -9,30 +10,31 @@
 
 .search {
 	font-size: 2rem;
-	color: grey;
-	border: 0.3rem solid grey;
+	color: palette.$secondary-color;
+	border: 0.3rem solid palette.$secondary-color;
 	padding: 1rem;
 	margin: 1rem 3rem;
-	background-color: transparent;
+	background-color: palette.$background-light;
+	
 	transition: 0.15s ease margin-top;
 	cursor: auto;
 	border-radius: 3rem;
 	flex-grow: 1;
-	box-shadow: 0 10px 30px #919090;
+	box-shadow: 0 10px 30px palette.$box-shadow-soft;
 	opacity: 0.9;
 
 	&:hover {
-		background-color: #d0d0d030;
+		background-color: transparent;
 	}
 }
 
 .button {
 	width: 4rem;
 	height: 4rem;
-	color: #fff;
+	color: palette.$basic-color-white;
 	font-size: 1.5rem;
 	border: 0;
-	background-color: grey;
+	background-color: palette.$secondary-color;
 	transition: 0.2s ease background-color;
 	border-radius: 50%;
 	position: absolute;
@@ -42,13 +44,13 @@
 	&:hover {
 		transition: all 0.25s ease-in;
 		opacity: 1;
-		background-color: black;
+		background-color: palette.$basic-color-black;
 	}
 }
 
 .error {
-	color: red;
-	background-color: rgba(255, 0, 0, 0.202);
+	color:  palette.$error-messages;
+	background-color: palette.$error-background;
 }
 
 // mobile

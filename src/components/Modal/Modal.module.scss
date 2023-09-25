@@ -1,13 +1,14 @@
 @use '../../partials/mixins.scss';
+@use '../../partials/palette.scss';
 
 .modal-card {
-	background-color: rgb(249, 244, 244); 
-	color: black;
+	background-color: palette.$background-light; 
+	color: palette.$basic-color-black;
 	width: 40%;
 	height: 40vh;
 	border-radius: 1rem;
 	text-align: center;
-	box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.905);
+	box-shadow: palette.$box-shadow-dark;
 	opacity: 0.7;
 	padding: 2rem;
 	font-size: 1.1rem;
@@ -49,14 +50,14 @@
 
 // mobile
 @include mixins.phone {
-	.modalCard {
+	.modal-card {
 		width: 90%;
 		height: 50vh;
 	}
 }
 
 @include mixins.tablet {
-	.modalCard {
+	.modal-card  {
 		width: 70%;
 	}
 }
