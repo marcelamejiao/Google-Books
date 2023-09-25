@@ -41,7 +41,7 @@ const SearchBar = ( { setBooks } ) => {
 					/>
 					<button className={styles.button}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
 				</div>
-				<div>{error}</div>
+				<div className={styles.error}>{error}</div>
 			</form>
 		</>
 	);

@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 
 const Modal = ( { book, setModalBookData } ) => {
-	let modalClasses = styles.modalCard;
+	let modalClasses = styles['modal-card'];
 	let wrapperClasses = styles['modal-wrapper'];
-	let modalDetailClass = styles['modalCard__detail'];
+	let modalDetailClass = styles['modal-card__detail'];
 
 	if (!book) {
 		wrapperClasses += ` ${styles['modal-wrapper--hidden']}`

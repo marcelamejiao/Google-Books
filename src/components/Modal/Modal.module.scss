@@ -1,6 +1,6 @@
 @use '../../partials/mixins.scss';
 
-.modalCard {
+.modal-card {
 	background-color: rgb(249, 244, 244); 
 	color: black;
 	width: 40%;
@@ -21,6 +21,7 @@
 
 	&__detail {
 		text-align: left;
+		padding: 0.4rem;
 	}
 
 	&:hover {
