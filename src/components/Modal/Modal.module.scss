@@ -1,0 +1,63 @@
+@use '../../partials/mixins.scss';
+@use '../../partials/palette.scss';
+
+.modal-card {
+	background-color: palette.$background-light; 
+	color: palette.$basic-color-black;
+	width: 40%;
+	height: 40vh;
+	border-radius: 1rem;
+	text-align: center;
+	box-shadow: palette.$box-shadow-dark;
+	opacity: 0.7;
+	padding: 2rem;
+	font-size: 1.1rem;
+	font-weight: 400;
+	text-transform: uppercase;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+	line-height: 1.8rem;
+	overflow-y: scroll;
+
+	&__detail {
+		text-align: left;
+		padding: 0.4rem;
+	}
+
+	&:hover {
+		transform: translateY(-5px);
+		border: none;
+		transition: all 0.25s ease-in;
+		opacity: 0.9;
+	}
+}
+
+.modal-wrapper {
+	top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&--hidden {
+		display: none;
+	}
+}
+
+// mobile
+@include mixins.phone {
+	.modal-card {
+		width: 90%;
+		height: 50vh;
+	}
+}
+
+@include mixins.tablet {
+	.modal-card  {
+		width: 70%;
+	}
+}

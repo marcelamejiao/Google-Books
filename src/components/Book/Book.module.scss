@@ -1,0 +1,76 @@
+@use '../../partials/mixins.scss';
+@use '../../partials/palette.scss';
+
+.book {
+	width: 18%;
+	height: 40vh;
+	border-bottom: solid 0.5rem palette.$basic-color-black;
+	background-color: palette.$basic-color-black;
+	border-radius: 1rem;
+	overflow-y: scroll;
+	box-shadow: palette.$box-shadow-dark;
+	opacity: 0.9;
+
+	&:hover {
+		transform: translateY(-5px);
+		border: none;
+		border-bottom: 0.5rem solid palette.$vivid-color;
+		border-top: 0.5rem solid palette.$vivid-color;
+		transition: all 0.25s ease-in;
+		opacity: 1;
+	}
+}
+
+.title {
+	text-align: center;
+	line-height: 1.25;
+	font-size: 1.1rem;
+	background-color: palette.$main-color;
+	color: palette.$basic-color-white;
+	box-shadow: 0 2px 5px 0 palette.$box-shadow-gold;
+	margin: 0;
+	padding: 0.5rem;
+	font-weight: 600;
+	height: 13%;
+	overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.image {
+	border-radius: 1rem;
+	box-shadow: 0 2px 5px 0  palette.$box-shadow-gold;
+	display: block;
+	margin: 0.5rem auto 0 auto;
+  width: 50%;
+}
+
+.text {
+	font-size: 0.8rem;
+	text-align: center;
+	padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+	color: palette.$basic-color-white;
+	line-height: 1.50;
+}
+
+// mobile
+
+@include mixins.phone {
+	.book {
+		width: 80%;
+	}
+
+	.text {
+		font-size: 1rem;
+	}
+}
+
+@include mixins.tablet {
+	.book {
+		width: 40%;
+	}
+
+	.text {
+		font-size: 1rem;
+	}
+}

@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import BooksList from "./container/BookList/BooksList";
+import Modal from "./components/Modal/Modal";
+import Title from "./components/Title/Title";
+import Error from "./components/Error/Error";
+import SearchBar from "./components/SearchBar/SearchBar";
+import { getBooksData } from "./services/book-services";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [modalBookData, setModalBookData] = useState(null);
+  const [books, setBooks] = useState([]);
+  const [error, setError] = useState('');
+
+  const refreshSearch = async (newQuery) => {
+		setError('');
+
+		try {
+			const booksData = await getBooksData(newQuery);
+			// with the APIs response, change the initial state
+			setBooks(booksData);
+		} catch (err) {
+			setError(err.message);
+			// when an error occurs don't show any books
+			setBooks([]);
+		}
+	};
+
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Title />
+      <SearchBar 
+        setBooks={setBooks}
+        onSubmit={(newQuery) => {refreshSearch(newQuery)}}
+        placeholder="enter the book's name..."
+        />
+      {error ? (<Error error={error} />) : ''}
+      <BooksList setModalBookData={setModalBookData} books={books} />
+      <Modal book={modalBookData} setModalBookData={setModalBookData} />
     </>
   )
 }
 
-export default App
+export default App;
