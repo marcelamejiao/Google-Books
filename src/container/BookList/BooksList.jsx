@@ -7,11 +7,11 @@ const BooksList = ( {setModalBookData, books} ) => {
 	return (
 		<>
 			<div className={styles.wrap}>
-				{books.map((book, index) => {
+				{books.map((book) => {
 					return (
 						<Book 
 							book={book}
-							key={index}	
+							key={book.id}	
 							setModalBookData={setModalBookData}
 						/>
 					);

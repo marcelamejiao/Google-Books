@@ -1,0 +1,7 @@
+@use '../../partials/palette.scss';
+
+.error {
+	color:  palette.$error-messages;
+	background-color: palette.$error-background;
+	padding-left: 3rem;
+}

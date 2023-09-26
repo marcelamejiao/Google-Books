@@ -48,12 +48,6 @@
 	}
 }
 
-.error {
-	color:  palette.$error-messages;
-	background-color: palette.$error-background;
-	padding-left: 3rem;
-}
-
 // mobile
 @include mixins.phone {
 	.search {

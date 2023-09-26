@@ -1,49 +1,36 @@
 import { useState } from "react";
-import { getBooksData } from "../../services/book-services";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import styles from './SearchBar.module.scss';
 
-const SearchBar = ( { setBooks } ) => {
+const SearchBar = ( { onSubmit, ...inputProps } ) => {
 	const [bookName, setBookName] = useState('');
 
-	const [error, setError] = useState('');
-
-	const refreshSearch = async (e) => {
-		e.preventDefault();
-		setError('');
-
-		try {
-			const booksData = await getBooksData(bookName);
-			// with the APIs response, change the initial state
-			setBooks(booksData);
-		} catch (err) {
-			setError(err.message);
-			// when an error occurs don't show any books
-			setBooks([]);
-		}
+	const handleChange = (e) => {
+		setBookName(e.target.value);
 	};
 
-	const handleChange = (e) => {
-		setError('');
-		setBookName(e.target.value);
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		onSubmit(bookName);
 	};
 
 	return (
 		<>
-			<form onSubmit={refreshSearch}>
+			<form onSubmit={handleSubmit}>
 				<div className={styles.wrapper}>
 					<input
 					required
 					className={styles.search}
 					type="text" 
-					placeholder="enter the book's name..."
 					value={bookName} 
 					onChange={handleChange} 
+					{...inputProps}
 					/>
-					<button className={styles.button}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
+					<button className={styles.button}>
+						<FontAwesomeIcon icon={faMagnifyingGlass} />
+					</button>
 				</div>
-				<div className={styles.error}>{error}</div>
 			</form>
 		</>
 	);
