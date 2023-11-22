@@ -59,7 +59,7 @@ The coulor palette here: https://colorhunt.co/palette/164b601b6b934fc0d0a2ff86
 
 ## **Deployed link**
 
-💡 Live version: [To be deployed - click here!]()
+💡 Live version: [Click here!](https://marcelamejiao.github.io/Google-Books/)
 
 ## **Future Development**
 
