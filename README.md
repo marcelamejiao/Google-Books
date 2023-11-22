@@ -23,8 +23,7 @@ The user can scroll down to see the complete book's description. In addition to 
 
 Fetching data from an API is kind of a game, as different scenarios can occur. I got a 429 error which made it a bit hard to understand what was happening. The docs did not made it clear what the issue was, then after a while I found out that I needed to get a API key to fetch data from the Google Books API as an individual user rather than a public user due to Google's daily rate limiting.
 
-For this project I went with a pinch of vivid colour to make a change from the colours that I usually choose.
-The coulor palette here: https://colorhunt.co/palette/164b601b6b934fc0d0a2ff86
+For this project I went with a pinch of blue vivid colour to make a change from the colours that I usually choose. I also added the brown color to give the site a leathery look like the cover of a book. 
 
 ## **Functionality**
 - Search the book by Title or Author.
@@ -49,13 +48,9 @@ The coulor palette here: https://colorhunt.co/palette/164b601b6b934fc0d0a2ff86
 
 ![Phone](./public/phone-screenshot.png)
 
-* **Tablet Mode**
+* **Tablet Mode and Error**
 
 ![Tablet](./public/tablet-screenshot.png)
-
-* **Error**
-
-![Error](./public/error-screenshot.png)
 
 ## **Deployed link**
 
