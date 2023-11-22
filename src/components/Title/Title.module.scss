@@ -2,17 +2,18 @@
 
 .title {
 	color: palette.$basic-color-white;
-	border-bottom: 5px solid palette.$vivid-color;
+	border-bottom: 5px solid palette.$main-color;
 	border-radius: 0.5rem;
 	text-align: center;
 	font-family: 'Lora', sans-serif;
 	background-color: palette.$basic-color-black;
 	font-size: 3rem; 
 	padding: 1rem;
+	letter-spacing: 0.1rem;
 
 	&:hover {
 		border: none;
-		border-bottom: 5px solid palette.$main-color;
+		border-bottom: 5px solid palette.$vivid-color;
 		transition: all 0.25s ease-in; 
 	}
 }

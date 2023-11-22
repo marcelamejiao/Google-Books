@@ -6,10 +6,10 @@
 	color: palette.$basic-color-black;
 	width: 40%;
 	height: 40vh;
-	border-radius: 1rem;
+	border-radius: 2rem;
 	text-align: center;
 	box-shadow: palette.$box-shadow-dark;
-	opacity: 0.7;
+	opacity: 0.9;
 	padding: 2rem;
 	font-size: 1.1rem;
 	font-weight: 400;
@@ -19,6 +19,8 @@
   top: 0;
 	line-height: 1.8rem;
 	overflow-y: scroll;
+	font-weight: 900;
+	letter-spacing: 0.1rem;	
 
 	&__detail {
 		text-align: left;
@@ -29,7 +31,7 @@
 		transform: translateY(-5px);
 		border: none;
 		transition: all 0.25s ease-in;
-		opacity: 0.9;
+		opacity: 1;
 	}
 }
 
